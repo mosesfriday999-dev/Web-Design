@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #f7cac9 0%, #92a8d1 100%);
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255,255,255,0.7);
+  padding: 24px 0 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+
+#searchBox {
+  padding: 12px 18px;
+  width: 260px;
+  border: 2px solid #e67e22;
+  border-radius: 8px 0 0 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#searchBox:focus {
+  border-color: #2980b9;
+}
+
+button {
+  padding: 12px 18px;
+  border: 2px solid #e67e22;
+  border-radius: 0 8px 8px 0;
+  background: #e67e22;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+button:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+article {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.post {
+  background: linear-gradient(135deg, #f9e79f 0%, #f7cac9 100%);
+  border: 2px solid #e67e22;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+  padding: 24px;
+  margin-bottom: 28px;
+  border-radius: 14px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+}
+
+.post h2 {
+  color: #e67e22;
+  margin-top: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.post p {
+  color: #2c3e50;
+  font-size: 1.15em;
+  line-height: 1.6;
+}
+
+body.dark-mode {
+  background: #222;
+  color: #eee;
+}
+
+body.dark-mode header {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .post {
+  background: #444;
+  color: #eee;
+  border-color: #2980b9;
+}
+
+body.dark-mode button {
+  background: #2980b9;
+  border-color: #2980b9;
+  color: #fff;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+  background: #333;
+  color: #fff;
+  border-color: #2980b9;
+}
+
+nav {
+  margin-bottom: 16px;
+}
+nav a {
+  color: #2980b9;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}

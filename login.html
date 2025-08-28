@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Moses' Blog</title>
+  <link rel="stylesheet" href="style.css/style.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #92a8d1 0%, #f7cac9 100%);
+    }
+    .login-container {
+      max-width: 350px;
+      margin: 80px auto;
+      padding: 40px 32px;
+      background: #222;
+      color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(44,62,80,0.18);
+      text-align: center;
+    }
+    .login-container input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #e67e22;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    .login-container button:hover {
+      background: #2980b9;
+    }
+    .login-container .error {
+      color: #f7cac9;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to Moses' Blog</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required><br>
+      <input type="password" id="loginPassword" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <p class="error" id="loginError"></p>
+  </div>
+  <script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+      e.preventDefault();
+      const username = document.getElementById('loginUsername').value.trim();
+      const password = document.getElementById('loginPassword').value;
+      const user = JSON.parse(localStorage.getItem('user'));
+      if(user && user.username === username && user.password === password) {
+        document.getElementById('loginError').textContent = '';
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('loginError').textContent = 'Invalid username or password.';
+      }
+    };
+  </script>
+</body>
+</html>

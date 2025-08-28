@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moses' Blog</title>
+  <link rel="stylesheet" href="style.css/style.css">
+</head>
+<body>
+  <div style="display: flex; gap: 32px;">
+    <aside id="sidebar" style="width: 220px;">
+      <h3>Sort Posts</h3>
+      <select id="sortSelect" onchange="sortPosts()">
+        <option value="date">Date</option>
+        <option value="likes">Likes</option>
+        <option value="views">Views</option>
+      </select>
+      <h3>Filter by Tag</h3>
+      <input type="text" id="tagFilter" placeholder="Enter tag" oninput="filterByTag()">
+    </aside>
+    <div style="flex: 1;">
+      <header>
+        <h1>Welcome to Moses' Blog</h1>
+        <nav>
+          <a href="#" onclick="showHome()">Home</a> |
+          <a href="#" onclick="showAbout()">About</a> |
+          <a href="#" onclick="showContact()">Contact</a>
+        </nav>
+        <input type="text" id="searchBox" placeholder="Search posts...">
+        <button onclick="search()">Search</button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      </header>
+      <section id="editor">
+        <h2>Add a New Post</h2>
+        <input type="text" id="newTitle" placeholder="Post title"><br><br>
+        <textarea id="newContent" placeholder="Post content"></textarea><br><br>
+        <input type="file" id="newImage" accept="image/*"><br><br>
+        <button onclick="addPost()">Publish</button>
+      </section>
+      <main id="blogContainer"></main>
+      <div id="aboutSection" style="display:none;">
+        <h2>About</h2>
+        <p>This is Moses' Blog. Here you can read posts, comment, and interact!</p>
+      </div>
+      <div id="contactSection" style="display:none;">
+        <h2>Contact</h2>
+        <p>Email: moses@example.com</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js/script.js"></script>
+</body>
+</html>
